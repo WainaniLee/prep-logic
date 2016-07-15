@@ -7,7 +7,7 @@ function flipSwitch(){
   if(isTurnedOn){
     isTurnedOn = false;
   }
-}
+  }
 /*If/Else Statements
 If/Else statments have the same behavior as our if statement above but we can add a secondary condition in the case that our if statement is not true to take another action instead. What if our light is already turned off when we flip the switch?
 
@@ -34,59 +34,145 @@ for(var i = 0; i < lotteryNumbers; i++){
   var currentLotteryNumber = lotteryNumbers[i];
   checkWinningNumber(currentLotteryNumber);
 }
+ 
 
 function makeCrazyLongString(string){
   var outputString = "";
   for(var i =0; i < 100; i++){
-    outputString = outputString.concat(string);
+    outputString = outputString.concat(string);         
   }
 }
 /*makeCrazyLongString('taco');
 Function - youGetTaco
-Write a function that takes a single String parameter called action. If the value passed into our function is eathave the function return the String value EAT TACOS.
-*/
+Write a function that takes a single String parameter called action. If the value passed into our function is eathave the function return the String value EAT TACOS.*/
 
+function youGetTaco(action){
+  if (action === "eat"){
+    return "Eat Tacos";
+  }
+}
+
+youGetTaco();
+
+console.log(youGetTaco("eat"));
+     
 
 /*Function - isNumberGreaterThan
 Write a function that takes two variables of type Number called first and secondrespectively. Return true if the first number is greater than the second.*/
 
-
+function isNumberGreaterThan(first,second){
+if (first > second){
+  return true;
+}
+}
+console.log(isNumberGreaterThan(5,3));//true    
+  
 
 /*Function - isTrue
 Write a function that takes in a Boolean value named val and have the function return whether the value is true.*/
+function isTrue(val){
+
+  if (val === true){
+    return true;
+  }
+}
+
+console.log(isTrue(true));
 
 /*Function - isFalse
 Write a function that takes in a Boolean value named val and have the function return whether the value is false.*/
+
+function isFalse(val){
+  if(val === false){
+    return false;
+  }
+}
+
+console.log(isFalse(false));
 
 
 
 /*Function - isEqual
 Write a function that takes two variables of type String called firstWord and secondWordrespectively. Return 'AWWWWRIGHT' if the two are equal otherwise return 'Y U NO MATCH!'.*/
 
+function isEqual(firstWord,secondWord){
+
+  if(firstWord===secondWord){
+    return  'AWWWWRIGHT';
+
+  }
+}
+
+  console.log(isEqual());
 
 /*Function - isNotEqual
 Write a function that takes two variables of type String called firstWord and secondWordrespectively. Return 'AWWWWRIGHT' if the two are not equal otherwise return 'Y U MATCH!'.*/
 
-
+function isNotEqual(firstWord,secondWord){
+if (firstWord !== secondWord){
+  return "AWWWWRIGHT";
+}else{ 
+  return "No Match";
+  }
+}
+console.log(isNotEqual());
 /*Function - doubleEquals
 Write a function that takes two variables of type Boolean called first and secondrespectively. Return true if both values are true otherwise return false.*/
+function doubleEquals(first,second){
+  if (first === second){
+    return true;
+  }
+}
+console.log(doubleEquals());
+ 
 
 /*Function - totalOver30
 Write a function that takes three variables of type Number called first and second and third respectively. Return true if the sum of all values are greater than 30 otherwise return false.*/
 
+function totalOver30(first,second,third){
+  if(first+second+third > 30){
+    return true;
+
+  }else{
+
+    return false;
+  }
+}
+console.log(totalOver30());
+ 
+
 /*Function - totalUnderWhat
 Write a function that takes four variables of type Number called first and second and third and fourth respectively. Return true if the sum of first, second and third are less than fourth otherwise return false.*/
-
+function totalUnderWhat(first,second,third,fourth){
+if (first+second+third < fourth)
+  return true;
+}
+totalUnderWhat(3,7,8,9);
 
 /*Function - looptoNumber
 Write a function that takes in a Number value named limit and have the function write a for loop that loops the number of times of limit and console.log each number as the loop executes.*/
+function looptoNumber(limit){
+  for (var i = 0; i<limit; i++){
+    console.log("book:" + i);
+  }
+}
 
+looptoNumber(5);
 
 
 /*Function - showEachValue
 Write a function that takes in a Array value named characters that has a sequence of single character String values and have the function write a for loop that loops for each number of elements in the Array and console.log each character as the loop executes.*/
+var word= ["d", "e", "f"];
 
+function showEachValue(character){
+  for(var i = 0; i<character.length; i++){
+    console.log(character[i]);
+  }
+}
 
+showEachValue(word);
+showEachValue("bees");
+showEachValue("cars");
 /*Function - createArrayFromString
 Write a function that takes a single variable of type String called word and write a for loop that creates an Array made up of each character in word except for A. We don't want no stinking A in our Array. Note: You will need to use the Array.push() method to complete this function.*/
 
@@ -101,4 +187,21 @@ Write a function that takes an Array with any number of type Number and second v
 
 /*Function - checkTrueValues
 Write a function that takes an Array with any number of type Boolean values and write a for loop to call our isTrue function with each value as input and return true if all values return true from our isTrue function.*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
